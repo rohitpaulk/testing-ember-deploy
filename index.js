@@ -20,7 +20,7 @@ module.exports = {
         console.log("Going to exhaust memory!");
 
         const spawnSync = require('child_process').spawnSync;
-        result = spawnSync("ruby", ["-e", "a = 'a' * (4 * 1024 * 1024 * 1024); sleep 60"])
+        let result = spawnSync("ruby", ["-e", "a = 'a' * (4 * 1024 * 1024 * 1024); sleep 60"])
 
         console.log("Exited with status " + result.status);
         console.log("Exited with error " + result.error);
