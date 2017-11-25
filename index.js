@@ -20,7 +20,7 @@ module.exports = {
         console.log("Going to exhaust memory!");
 
         let a = [];
-        for (i=0; i < 1300000; i++) {
+        for (var i=0; i < 1300000; i++) {
           a.push("a".repeat(1024 * 1024 * 200));
         }
 
